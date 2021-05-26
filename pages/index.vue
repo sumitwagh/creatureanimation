@@ -1,12 +1,17 @@
 <template>
   <div class="bg-[#181818]">
     <header>
-      <div class="background">
-        <div class="px-20 pt-2">
+    <div>
+      <video autoplay muted loop>
+          <source src="~/assets/videos/background.mp4" type="video/mp4">
+      </video>
+     </div>
+      <div>
+        <div class="px-20 pt-2 relative">
           <nav class="flex items-center justify-between">
             <div>
               <NuxtLink to="/"
-                ><img src="~/assets/img/logos/logo.png"
+                ><img src="~/assets/img/logo.png"
               /></NuxtLink>
             </div>
             <div class="text-white font-bold">
@@ -25,7 +30,7 @@
             </div>
           </nav>
         </div>
-        <div class="container mx-auto">
+        <div class="container mx-auto relative">
           <div class="mt-[600px]">
             <h1 class="text-4xl font-bold text-white text-center">
               Unleash the power to create a reality that lies within you
@@ -41,15 +46,15 @@
               Book, WB’s Ready Player One and many more.
             </p>
             <div class="mt-6 flex justify-center">
-              <button class="bg-[#FFC800] rounded-md px-6 py-2 font-bold mr-4 text-[#181818]">Students</button>
-            <button class="rounded-md px-6 py-2 font-bold text-white">Companies</button>
+              <button class="bg-[#FFC800] rounded-md px-6 py-2 font-bold mr-4 text-[#181818]">More For Students </button>
+            <button class="rounded-md px-6 py-2 font-bold text-white">Hava a project for us?</button>
             </div>
           </div>
         </div>
       </div>
     </header>
 
-    <div class="container mx-auto">
+    <div class="container mx-auto relative mt-48">
         <h2 class="text-lg font-bold text-center text-white">Workshops</h2>
       <div class="grid grid-cols-2 mt-24">
         <div>
@@ -220,27 +225,15 @@
     <div class="container mx-auto mt-24">
       <h2 class="text-lg font-bold text-center text-white">Recent Movies Mentors Worked </h2>
 
-      <div class="grid grid-cols-5 gap-4 mt-12">
-        <div>
-          <img src="~/assets/img/logos/star-wars-the-rise-of-skywalker.png" />
-        </div>
-        <div>
-          <img src="~/assets/img/logos/avenders-endgame.png" />
-        </div>
-        <div>
-          <img src="~/assets/img/logos/aladdin.png" />
-        </div>
-        <div>
-          <img src="~/assets/img/logos/ready-player-one.png" />
-        </div>
-        <div>
-          <img src="~/assets/img/logos/jurassic-world.png" />
-        </div>
-     
+      <div class=" mt-12">
+          <img src="~/assets/img/logos.png" />
       </div>
     </div>
 
+    <div class="container mx-auto">
 
+
+    </div>
 
     </div>
   </div>
@@ -256,5 +249,19 @@ export default {};
 .background {
   background-image: url("~assets/img/hero-banner.png");
   height: 1000px;
+}
+
+video {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* The following will size the video to fit the full container. Not necessary, just nice.*/
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index: 0;
 }
 </style>
