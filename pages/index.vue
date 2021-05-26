@@ -3,7 +3,7 @@
     <header>
     <div>
       <video autoplay muted loop>
-          <source src="~/assets/videos/background.mp4" type="video/mp4">
+          <source src="/videos/background.mp4" type="video/mp4">
       </video>
      </div>
       <div>
